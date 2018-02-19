@@ -1,8 +1,8 @@
-
 const fs = require('fs');
 const xml = require('xml2js');
 const colors = require('colors');
 const Table = require('cli-table2');
+
 const parser = new xml.Parser();
 
 let meta = [];
