@@ -1,0 +1,31 @@
+{
+  "name": "quran",
+  "version": "1.0.0",
+  "description": "The Holy Quran for the commandline.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Allah",
+    "quran",
+    "holy",
+    "koran",
+    "islam",
+    "book",
+    "prophet",
+    "muhammad",
+    "verse",
+    "cli",
+    "console"
+  ],
+  "author": "Sarfraz Ahmed",
+  "license": "MIT",
+  "dependencies": {
+    "cli-table2": "^0.2.0",
+    "commander": "^2.14.1",
+    "xml2js": "^0.4.19"
+  },
+  "preferGlobal": true,
+  "bin": "./index.js"
+}
