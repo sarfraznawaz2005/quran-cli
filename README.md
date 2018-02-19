@@ -24,6 +24,8 @@ Read/Recite The Holy Quran from the commandline with English translation.
 
 Command format is: `read|r <chapter> [verse] [arabic]` where `verse` and `arabic` arguments are optional.
 
+To read 1st chapter:
+
 `quran read 1` or with alias `quran r 1`
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen1.png)
@@ -34,6 +36,8 @@ Command format is: `read|r <chapter> [verse] [arabic]` where `verse` and `arabic
 
 **Read Specific Verse from a Chapter**
 
+To read 2nd verse from 2nd chapter:
+
 `quran read 2 2` or with alias `quran r 2 2`
 
 ![Chapters](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen2.png)
@@ -43,6 +47,8 @@ Command format is: `read|r <chapter> [verse] [arabic]` where `verse` and `arabic
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen5.png)
 
 **Read Specified Range of Verses from a Chapter**
+
+To read verses from 1 to 5 from 12th chapter:
 
 `quran read 12 1:5` or with alias `quran r 12 1:5`
 
