@@ -1,5 +1,5 @@
 {
-  "name": "quran",
+  "name": "quran-cli2",
   "version": "1.0.0",
   "description": "The Holy Quran for the commandline.",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "cli",
     "console"
   ],
-  "author": "Sarfraz Ahmed",
+  "author": "Sarfraz Ahmed <sarfraznawaz2005@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "cli-table2": "^0.2.0",
