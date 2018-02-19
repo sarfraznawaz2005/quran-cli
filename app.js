@@ -26,7 +26,7 @@ const info = (chapter) => {
 }
 
 function listChapters() {
-    var table = new Table({ head: ['Index', 'Chapter'] });
+    var table = new Table({ head: [colors.cyan('Index'), colors.cyan('Chapter')] });
 
     chapterList.forEach(function (chapter) {
         table.push([colors.green(chapter.index), colors.yellow(chapter.name)]);

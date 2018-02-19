@@ -28,7 +28,7 @@ Command format is: `read|r <chapter> [verse] [arabic]` where `verse` and `arabic
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen1.png)
 
-***English Only***: To read 1st chapter for example, type: `quran read 1 0 0'. Here first `0` means no verse and second `0` means no Arabic text.
+***English Only***: To read 1st chapter for example, type: `quran read 1 0 0`. Here first `0` means no verse and second `0` means no Arabic text.
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen6.png)
 
@@ -38,7 +38,7 @@ Command format is: `read|r <chapter> [verse] [arabic]` where `verse` and `arabic
 
 ![Chapters](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen2.png)
 
-***English Only***: To read 25th verse of chapter 3 for example, type: `quran read 3 25 0'. Here `0` means no Arabic text.
+***English Only***: To read 25th verse of chapter 3 for example, type: `quran read 3 25 0`. Here `0` means no Arabic text.
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen5.png)
 
