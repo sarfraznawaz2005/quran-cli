@@ -1,6 +1,6 @@
 # quran-cli
 
-Read/Recite The Holy Quran from the commandline with English translation.
+:closed_book: Read/Recite The Holy Quran from the commandline with English translation.
 
 # Requirements
 
@@ -30,7 +30,7 @@ To read 1st chapter:
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen1.png)
 
-***English Only***: To read 1st chapter for example, type: `quran read 1 0 0`. Here first `0` means no verse and second `0` means no Arabic text.
+***English Only***: To read 1st chapter for example, type: `quran read 1 0 0`. Here first `0` means no/all verses and second `0` means no Arabic text.
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen6.png)
 
