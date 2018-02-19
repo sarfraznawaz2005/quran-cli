@@ -1,6 +1,6 @@
-# quran-cli
+# :closed_book: quran-cli
 
-:closed_book: Read/Recite The Holy Quran from the commandline with English translation.
+Read/Recite The Holy Quran from the commandline with English translation.
 
 # Requirements
 
