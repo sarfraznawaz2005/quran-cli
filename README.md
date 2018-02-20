@@ -60,7 +60,7 @@ To search for word `book` for example:
 
 `quran search book` or with alias `quran s book`
 
-![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen6.png)
+![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen7.png)
 
 ***English Only***: Specify second arguments as `0` to hide arabic text.
 
