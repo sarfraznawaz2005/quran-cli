@@ -62,7 +62,7 @@ To search for word `book` for example:
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen7.png)
 
-***English Only***: Specify second arguments as `0` to hide arabic text.
+***English Only***: Specify second arguments as `0` to hide arabic text: `quran search book 0`
 
 **Get Information about a Chapter**
 
