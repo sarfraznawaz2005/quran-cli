@@ -1,5 +1,5 @@
 {
-  "name": "quran-cli2",
+  "name": "quran",
   "version": "1.0.0",
   "description": "The Holy Quran for the commandline.",
   "main": "index.js",
