@@ -54,6 +54,16 @@ To read verses from 1 to 5 from 12th chapter:
 
 ![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen3.png)
 
+**Search in Translation**
+
+To search for word `book` for example:
+
+`quran search book` or with alias `quran s book`
+
+![Screenshot](https://raw.githubusercontent.com/sarfraznawaz2005/quran-cli/master/screen6.png)
+
+***English Only***: Specify second arguments as `0` to hide arabic text.
+
 **Get Information about a Chapter**
 
 `quran info 12` or with alias `quran i 12`

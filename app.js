@@ -25,8 +25,13 @@ const info = (chapter) => {
     readData(() => getChapterInfo(chapter));
 }
 
+// search for given keyword in all chapters translations
+const search = function (keyword, arabic) {
+    readData(() => searchTranslations(keyword, arabic));
+}
+
 function listChapters() {
-    var table = new Table({ head: [colors.cyan('Index'), colors.cyan('Chapter')] });
+    let table = new Table({ head: [colors.cyan('Index'), colors.cyan('Chapter')] });
 
     chapterList.forEach(function (chapter) {
         table.push([colors.green(chapter.index), colors.yellow(chapter.name)]);
@@ -44,7 +49,7 @@ function getChapterInfo(chapter) {
         process.exit(1);
     }
 
-    var table = new Table({
+    let table = new Table({
         head: [
             colors.green('Index'),
             colors.green('Name'),
@@ -97,7 +102,7 @@ function getEntireChapter(chapter, arabic) {
         process.exit(1);
     }
 
-    var table = new Table({
+    let table = new Table({
         colWidths: [null, 80],
         wordWrap: true,
         style: { head: [], border: [] }
@@ -120,7 +125,7 @@ function getChapterVerse(chapter, verse, arabic) {
 
     let isRange = verse.includes(':');
 
-    var table = new Table({
+    let table = new Table({
         colWidths: [null, 80],
         wordWrap: true,
         style: { head: [], border: [] }
@@ -246,8 +251,75 @@ function setVerses(table, chapter, verses, arabic, isRange) {
     return table;
 }
 
+function searchTranslations(keyword, arabic) {
+    let results = [];
+
+    meaning.forEach(function (chapter, index) {
+
+        if (typeof chapter.aya[index] !== 'undefined') {
+            let verse = chapter.aya[index].$.text;
+            let verseNumber = chapter.aya[index].$.index;
+            let chapterName = meta.sura[index].$.tname;
+            let arabicText = '';
+
+            // add arabic text too if needed
+            if (!arabic || arabic != 0) {
+                arabicText = quran[index].aya[index].$.text;
+            }
+
+            if (verse.includes(keyword) || verse.toLowerCase().includes(keyword)) {
+                results.push({
+                    chapter: chapter.$.index + ' - ' + chapterName,
+                    verse: verseNumber,
+                    arabic: arabicText,
+                    text: verse
+                });
+            }
+        }
+    });
+
+    if (results.length == 0) {
+        print(colors.red('Nothing found for given text.'));
+        return;
+    }
+
+    let rowSpan = 1;
+
+    let table = new Table({
+        colWidths: [null, null, 80],
+        wordWrap: true,
+        head: [
+            colors.cyan('Chapter'),
+            colors.cyan('Verse'),
+            colors.cyan('Text')
+        ]
+    });
+
+    results.forEach(function (result) {
+        if (!arabic || arabic != 0) {
+            table.push(
+                [
+                    { rowSpan: 2, vAlign: 'center', content: colors.green(result.chapter) },
+                    { rowSpan: 2, vAlign: 'center', hAlign: 'center', content: colors.green(result.verse) },
+                    { content: colors.yellow(result.arabic) },
+                ],
+                [result.text]
+            );
+        } else {
+            table.push([
+                { content: colors.green(result.chapter) },
+                { hAlign: 'center', content: colors.green(result.verse) },
+                result.text
+            ]);
+        }
+    });
+
+    print(table.toString());
+}
+
 function print(text) {
     console.log(text);
 }
 
-module.exports = { chapters, info, read };
+
+module.exports = { chapters, info, read, search };
