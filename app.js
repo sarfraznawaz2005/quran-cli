@@ -255,19 +255,21 @@ function searchTranslations(keyword, arabic) {
     let results = [];
 
     meaning.forEach(function (chapter, index) {
+        chapter.aya.forEach(function (aya, index2) {
 
-        if (typeof chapter.aya[index] !== 'undefined') {
-            let verse = chapter.aya[index].$.text;
-            let verseNumber = chapter.aya[index].$.index;
+            let verse = aya.$.text;
+            let verseNumber = aya.$.index;
             let chapterName = meta.sura[index].$.tname;
+            let chapterNameEnglish = meta.sura[index].$.ename;
             let arabicText = '';
 
-            // add arabic text too if needed
-            if (!arabic || arabic != 0) {
-                arabicText = quran[index].aya[index].$.text;
-            }
-
             if (verse.includes(keyword) || verse.toLowerCase().includes(keyword)) {
+
+                // add arabic text too if needed
+                if (!arabic || arabic != 0) {
+                    arabicText = quran[index].aya[index2].$.text;
+                }
+
                 results.push({
                     chapter: chapter.$.index + ' - ' + chapterName,
                     verse: verseNumber,
@@ -275,7 +277,7 @@ function searchTranslations(keyword, arabic) {
                     text: verse
                 });
             }
-        }
+        });
     });
 
     if (results.length == 0) {
@@ -313,6 +315,8 @@ function searchTranslations(keyword, arabic) {
             ]);
         }
     });
+
+    table.push([{ colSpan: 3, hAlign: 'center', content: colors.magenta('Total Results: ' + results.length) }]);
 
     print(table.toString());
 }

@@ -64,6 +64,8 @@ To search for word `book` for example:
 
 ***English Only***: Specify second arguments as `0` to hide arabic text: `quran search book 0`
 
+**Note**: If search results are too much, they might not fit into cli buffer, in such case you can save search results to text file instead like here we search for word `Allah` to save into text file: `quran search Allah > filename.txt`
+
 **Get Information about a Chapter**
 
 `quran info 12` or with alias `quran i 12`
@@ -73,10 +75,6 @@ To search for word `book` for example:
 **Get Help Information**
 
 `quran --help`
-
-# Todo
-
-- Publish as npm module.
 
 # License
 
