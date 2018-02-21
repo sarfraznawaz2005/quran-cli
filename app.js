@@ -109,7 +109,10 @@ function getEntireChapter(chapter, arabic) {
     });
 
     table.push(
-        [{ colSpan: 2, content: colors.green(quran[chapter].$.index + ' : ' + quran[chapter].$.name) }]
+        [{
+            colSpan: 2,
+            content: colors.green(meta.sura[chapter].$.index + ' : ' + meta.sura[chapter].$.name + ' (' + meta.sura[chapter].$.ename + ')')
+        }]
     );
 
     table.push(
@@ -132,7 +135,10 @@ function getChapterVerse(chapter, verse, arabic) {
     });
 
     table.push(
-        [{ colSpan: 2, content: colors.green(quran[chapter].$.index + ' : ' + quran[chapter].$.name) }]
+        [{
+            colSpan: 2,
+            content: colors.green(meta.sura[chapter].$.index + ' : ' + meta.sura[chapter].$.name + ' (' + meta.sura[chapter].$.ename + ')')
+        }]
     );
 
     table.push(
