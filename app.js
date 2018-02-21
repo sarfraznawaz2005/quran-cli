@@ -31,7 +31,22 @@ const search = function (keyword, arabic) {
 }
 
 function listChapters() {
+
     let table = new Table({ head: [colors.cyan('Index'), colors.cyan('Chapter')] });
+
+    for (let i = 0; i <= 113; i++) {
+        chapterList.push({
+            index: (i + 1),
+            name: meta.sura[i].$.tname,
+            ename: meta.sura[i].$.ename,
+            aname: meta.sura[i].$.name,
+            ayas: meta.sura[i].$.ayas,
+            rukus: meta.sura[i].$.rukus,
+            start: meta.sura[i].$.start,
+            type: meta.sura[i].$.type,
+            order: meta.sura[i].$.order
+        });
+    }
 
     chapterList.forEach(function (chapter) {
         table.push([colors.green(chapter.index), colors.yellow(chapter.name)]);
@@ -179,31 +194,21 @@ function readData(callback) {
 
     fs.readFile(__dirname + '/data/quran-data.xml', function (err, data) {
         parser.parseString(data, function (err, result) {
-            meta = result.quran.suras[0];
 
-            for (let i = 0; i <= 113; i++) {
-                chapterList.push({
-                    index: (i + 1),
-                    name: meta.sura[i].$.tname,
-                    ename: meta.sura[i].$.ename,
-                    aname: meta.sura[i].$.name,
-                    ayas: meta.sura[i].$.ayas,
-                    rukus: meta.sura[i].$.rukus,
-                    start: meta.sura[i].$.start,
-                    type: meta.sura[i].$.type,
-                    order: meta.sura[i].$.order
-                });
-            }
+            meta = result.quran.suras[0];
 
             fs.readFile(__dirname + '/data/ar.quran.xml', function (err, data) {
                 parser.parseString(data, function (err, result) {
+
                     quran = result.quran.sura;
 
                     fs.readFile(__dirname + '/data/en.sahih.xml', function (err, data) {
                         parser.parseString(data, function (err, result) {
+
                             meaning = result.quran.sura;
 
                             callback();
+
                         });
                     });
                 });
