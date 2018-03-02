@@ -76,6 +76,11 @@ To search for word `book` for example:
 
 `quran --help`
 
+
+## Similar Projects
+
+- [The Holy Quran](https://github.com/sarfraznawaz2005/holy-quran)
+
 # License
 
 This project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
