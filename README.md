@@ -80,7 +80,7 @@ To search for word `book` for example:
 ## Similar Projects
 
 - [The Holy Quran](https://github.com/sarfraznawaz2005/holy-quran)
-- [Quran Chrome Extension](https://github.com/sarfraznawaz2005/quran-chrome)
+- [Quran Browser Extension](https://github.com/sarfraznawaz2005/quran-browser-extension)
 
 # License
 
