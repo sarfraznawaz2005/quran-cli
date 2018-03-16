@@ -9,7 +9,7 @@ Read/Recite The Holy Quran from the commandline with English translation.
 # Installation
 
 - Clone this repository. `git clone https://github.com/sarfraznawaz2005/quran-cli.git`
-- Type `npm install`
+- Type `npm install -g`
 - Type `npm link`
 
 # Usage
