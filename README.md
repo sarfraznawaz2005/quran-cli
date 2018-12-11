@@ -81,7 +81,6 @@ To search for word `book` for example:
 
 - [The Holy Quran](https://github.com/sarfraznawaz2005/holy-quran)
 - [Quran Browser Extension](https://github.com/sarfraznawaz2005/quran-browser-extension)
-- [Holy Quran Android](https://github.com/sarfraznawaz2005/nativescript-holyquran)
 
 # License
 
