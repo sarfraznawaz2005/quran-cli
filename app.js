@@ -66,7 +66,7 @@ function getChapterInfo(chapter) {
 
     let table = new Table({
         head: [
-            colors.green('Index'),
+            colors.green('Chapter'),
             colors.green('Name'),
             colors.green('Arabic'),
             colors.green('English'),
@@ -77,17 +77,17 @@ function getChapterInfo(chapter) {
             colors.green('Order')
         ]
     });
-
+        
     table.push([
-        chapterList[chapter].index,
-        chapterList[chapter].name,
-        chapterList[chapter].aname,
-        chapterList[chapter].ename,
-        chapterList[chapter].ayas,
-        chapterList[chapter].rukus,
-        chapterList[chapter].start,
-        chapterList[chapter].type,
-        chapterList[chapter].order
+        (chapter + 1),
+        meta.sura[chapter].$.tname,
+        meta.sura[chapter].$.name,
+        meta.sura[chapter].$.ename,        
+        meta.sura[chapter].$.ayas,
+        meta.sura[chapter].$.rukus,
+        meta.sura[chapter].$.start,
+        meta.sura[chapter].$.type,
+        meta.sura[chapter].$.order
     ]);
 
     print(colors.yellow(table.toString()));
