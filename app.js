@@ -1,7 +1,7 @@
 const fs = require('fs');
 const xml = require('xml2js');
 const colors = require('colors');
-const Table = require('cli-table2');
+const Table = require('cli-table3');
 
 const parser = new xml.Parser();
 

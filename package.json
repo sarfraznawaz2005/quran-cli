@@ -1,6 +1,6 @@
 {
   "name": "quran",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The Holy Quran for the commandline.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "author": "Sarfraz Ahmed <sarfraznawaz2005@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cli-table2": "^0.2.0",
+    "cli-table3": "^0.6",
     "commander": "^2.14.1",
     "xml2js": "^0.4.19"
   },
